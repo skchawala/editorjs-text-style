@@ -1,7 +1,7 @@
 {
   "name": "@skchawala/editorjs-text-style",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An Editor.js inline tool for applying font size and font family styles to selected text.",
   "author": "Satish Kumar <satishkchawala@gmail.com>",
   "license": "MIT",
@@ -20,7 +20,8 @@
     ".": {
       "import": "./dist/index.es.js",
       "require": "./dist/index.cjs.js",
-      "default": "./dist/index.umd.js"
+      "default": "./dist/index.umd.js",
+      "types": "./dist/types/index.d.ts"
     }
   },
   "publishConfig": {
