@@ -20,7 +20,11 @@ Install via npm or yarn:
 
 ```bash
 npm install editorjs-text-style
+```
+
 # or
+
+```bash
 yarn add editorjs-text-style
 ```
 
