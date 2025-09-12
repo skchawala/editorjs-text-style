@@ -33,7 +33,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/skchawala/editorjs-text-style.git"
+    "url": "git+https://github.com/skchawala/editorjs-text-style.git"
   },
   "scripts": {
     "dev": "vite",
