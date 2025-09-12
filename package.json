@@ -1,19 +1,60 @@
 {
   "name": "editorjs-text-style",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "1.0.0",
+  "description": "An Editor.js inline tool for applying font size and font family styles to selected text.",
+  "author": "Satish Kumar <satishkchawala@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/skchawala/editorjs-text-style",
+  "bugs": {
+    "url": "https://github.com/skchawala/editorjs-text-style/issues"
+  },
+  "private": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js",
+      "default": "./dist/index.umd.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skchawala/editorjs-text-style.git"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "dev:playground": "vite --config playground/vite.config.js"
+    "dev:playground": "vite --config playground/vite.config.js",
+    "postbuild": "tsc --emitDeclarationOnly"
   },
+  "keywords": [
+    "editorjs",
+    "plugin",
+    "text-style",
+    "rich-text",
+    "inline-tool",
+    "font-size",
+    "font-family"
+  ],
   "devDependencies": {
     "@editorjs/editorjs": "2.31.0",
     "typescript": "~5.8.3",
     "vite": "^7.1.2"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

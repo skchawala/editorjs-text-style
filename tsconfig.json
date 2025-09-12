@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "dist/types",
+    "emitDeclarationOnly": true,
+    "outDir": "dist",
     "target": "ES2022",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -11,7 +16,7 @@
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    "noEmit": false,
 
     /* Linting */
     "strict": true,

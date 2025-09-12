@@ -6,15 +6,18 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
       name: "EditorJSTextStyle",
-      fileName: (format) => `editorjs-text-style.${format}.js`,
+      fileName: (format) => `index.${format}.js`,
+      formats: ["es", "cjs", "umd"],
     },
     rollupOptions: {
-      external: ["editorjs"], // don't bundle editorjs itself
+      // Make sure to exclude peer dependencies from bundle
+      external: ["@editorjs/editorjs"],
       output: {
         globals: {
-          editorjs: "EditorJS",
+          "@editorjs/editorjs": "EditorJS",
         },
       },
     },
+    minify: true,
   },
 });
