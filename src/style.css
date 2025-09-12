@@ -1,0 +1,44 @@
+.cdx-text-style-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.cdx-text-style-actions select {
+  padding: 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.cdx-text-style-actions select:focus {
+  outline: none;
+}
+.cdx-text-style-actions select:hover {
+  border-color: #999;
+}
+.cdx-text-style-actions select option {
+  padding: 4px;
+}
+.cdx-text-style-actions select option:checked {
+  background-color: #999;
+}
+.cdx-text-style-actions select option:hover {
+  background-color: #ddd;
+}
+.cdx-text-style-actions select option:active {
+  background-color: #ddd;
+}
+.cdx-text-style-actions select option:focus {
+  outline: none;
+}
+.cdx-text-style-actions select option:disabled {
+  background-color: #ddd;
+}
+.cdx-text-style-actions select option:checked {
+  background-color: #999;
+}
+.cdx-text-style-actions select option:hover {
+  background-color: #ddd;
+}
+.cdx-text-style-actions select option:active {
+  background-color: #ddd;
+}
