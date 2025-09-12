@@ -1,5 +1,5 @@
 {
-  "name": "editorjs-text-style",
+  "name": "@skchawala/editorjs-text-style",
   "type": "module",
   "version": "1.0.0",
   "description": "An Editor.js inline tool for applying font size and font family styles to selected text.",
@@ -40,7 +40,8 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "dev:playground": "vite --config playground/vite.config.js",
-    "postbuild": "tsc --emitDeclarationOnly"
+    "postbuild": "tsc --emitDeclarationOnly",
+    "release": "npm publish --access public"
   },
   "keywords": [
     "editorjs",

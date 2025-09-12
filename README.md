@@ -19,20 +19,20 @@
 Install via npm or yarn:
 
 ```bash
-npm install editorjs-text-style
+npm install @skchawala/editorjs-text-style
 ```
 
 ### or
 
 ```bash
-yarn add editorjs-text-style
+yarn add @skchawala/editorjs-text-style
 ```
 
 ## 🚀 Usage
 
 ```bash
 import EditorJS from "@editorjs/editorjs";
-import TextStyleTool from "editorjs-text-style";
+import TextStyleTool from "@skchawala/editorjs-text-style";
 
 const editor = new EditorJS({
   holder: "editorjs",
