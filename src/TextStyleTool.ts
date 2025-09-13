@@ -213,11 +213,24 @@ export default class TextStyleInlineTool implements InlineTool {
     return { fontSize: null, fontFamily: null };
   }
 
+  isTextStyleApplied() {
+    return !!this.api.selection.findParentTag("SPAN", TextStyleInlineTool.CSS);
+  }
+
   renderActions() {
     const wrapper = document.createElement("div");
     wrapper.classList.add("cdx-text-style-actions");
-
+    const selection = window.getSelection();
     if (this.config.fontSizeEnabled) {
+      // get font size from the current selection
+      let appliedFontSize = null;
+      if (selection && selection.anchorNode && this.isTextStyleApplied()) {
+        // Check if selection is already inside our span
+        const parent = selection.anchorNode.parentElement;
+        if (parent) {
+          appliedFontSize = parent.style.fontSize;
+        }
+      }
       const sizeSelect = document.createElement("select");
       sizeSelect.id = "text-style-font-size";
       sizeSelect?.addEventListener("change", (e) => {
@@ -230,13 +243,21 @@ export default class TextStyleInlineTool implements InlineTool {
         const option = document.createElement("option");
         option.value = size.value;
         option.textContent = size.label;
-        option.selected = size.value === this.config.defaultFontSize;
+        option.selected =
+          size.value === (appliedFontSize || this.config.defaultFontSize);
         sizeSelect.appendChild(option);
       });
       wrapper.appendChild(sizeSelect);
     }
 
     if (this.config.fontFamilyEnabled) {
+      let appliedFontFamily = null;
+      if (selection && selection.anchorNode && this.isTextStyleApplied()) {
+        const parent = selection.anchorNode.parentElement;
+        if (parent) {
+          appliedFontFamily = parent.style.fontFamily;
+        }
+      }
       const familySelect = document.createElement("select");
       familySelect.id = "text-style-font-family";
       familySelect?.addEventListener("change", (e) => {
@@ -249,7 +270,8 @@ export default class TextStyleInlineTool implements InlineTool {
         const option = document.createElement("option");
         option.value = fam.value;
         option.textContent = fam.label;
-        option.selected = fam.value === this.config.defaultFontFamily;
+        option.selected =
+          fam.value === (appliedFontFamily || this.config.defaultFontFamily);
         familySelect.appendChild(option);
       });
       wrapper.appendChild(familySelect);
