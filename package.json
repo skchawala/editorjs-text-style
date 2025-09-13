@@ -31,7 +31,8 @@
     "dist",
     "README.md",
     "LICENSE",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    "public"
   ],
   "repository": {
     "type": "git",

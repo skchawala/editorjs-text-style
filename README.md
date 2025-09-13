@@ -2,6 +2,10 @@
 
 ✍️ An EditorJS inline tool for customizing **font size** and **font family** — lightweight, configurable, and easy to use.
 
+## Demo
+
+![EditorJS Text Style Demo](./assets/demo.gif)
+
 ---
 
 ## Features
