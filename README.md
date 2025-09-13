@@ -4,7 +4,7 @@
 
 ## Demo
 
-![EditorJS Text Style Demo](./assets/demo.gif)
+![EditorJS Text Style Demo](./public/demo.gif)
 
 ---
 
