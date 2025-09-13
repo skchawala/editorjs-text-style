@@ -82,3 +82,7 @@ const editor = new EditorJS({
   This is <span class="cdx-text-style" style="font-size: 20px; font-family: Verdana;">styled text</span> inside Editor.js.
 </p>
 ```
+
+## 📜 Changelog
+
+You can find the full list of changes in the [CHANGELOG.md](./CHANGELOG.md).
